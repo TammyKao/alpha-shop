@@ -19,18 +19,18 @@ function ProgressBar() {
 }
 
 export default function ProgressStep() { 
-   return(         
-        <div className="register-container">
-          <h2>結帳</h2>
-          <div className="progress-container">
-            <Step text="1" label="寄送地址"/>
-            <ProgressBar/>
-            <Step text="2" label="運送方式"/>
-            <ProgressBar/>
-            <Step text="3" label="付款資訊"/>
-          </div>
-        </div>
-         );
-        }
+   return (
+   <div className="register-container">
+     <h2>結帳</h2>
+     <div className="progress-container">
+       <Step text="1" label="寄送地址"/>
+       <ProgressBar/>
+       <Step text="2" label="運送方式"/>
+       <ProgressBar/>
+       <Step text="3" label="付款資訊"/>
+     </div>
+   </div>
+   );
+  }
 
 
