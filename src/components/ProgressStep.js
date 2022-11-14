@@ -18,7 +18,7 @@ function ProgressBar() {
   );
 }
 
-export default function StepProgress() { 
+export default function ProgressStep() { 
    return(         
         <div className="register-container">
           <h2>結帳</h2>
