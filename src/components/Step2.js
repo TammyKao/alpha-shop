@@ -23,8 +23,22 @@ export default function Step2() {
     <div>
       <h3 className="form-title">運送方式</h3>
       <section className="form-body col col-12">
-        <RadioGroup id="shipping-standard" type="radio" name="shipping" price="0" text="標準運送"  period="約 3~7 個工作天" />
-        <RadioGroup id="shipping-dhl" type="radio" name="shipping" price="500" text="DHL 貨運"  period="48 小時內送達" />
+        <RadioGroup 
+          id="shipping-standard" 
+          type="radio" 
+          name="shipping" 
+          price="0" 
+          text="標準運送"  
+          period="約 3~7 個工作天"
+         />
+        <RadioGroup 
+          id="shipping-dhl" 
+          type="radio" 
+          name="shipping" 
+          price="500" 
+          text="DHL 貨運"  
+          period="48 小時內送達"
+         />
       </section>
     </div>
     </form>
