@@ -1,4 +1,3 @@
-import './App.css';
 import './base.module.css';
 import ProgressStep from './components/ProgressStep.js'
 import Step1 from './components/Step1.js'
