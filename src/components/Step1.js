@@ -60,7 +60,7 @@ function SelectGroup ({label, options}) {
 
 
 
-function InputGroup ({label, type, placeholder}) {
+export function InputGroup ({label, type, placeholder}) {
   return (
     <div className="input-group">
       <div className="input-label">{label}</div>
