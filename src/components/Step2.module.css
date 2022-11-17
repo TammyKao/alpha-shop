@@ -1,8 +1,6 @@
 .form__container {
   width: 435px;
-  /* height: 192px; */
   margin-top: 64px;
-  border: 1px solid #000;
 }
 
 
@@ -10,13 +8,82 @@
   margin-top: 0;
   font-weight: 700;
   font-size: 24px;
-  border: 1px solid brown;  
 }
 
 
-.form__body {
-  margin-top:24px;
-  border: 1px solid brown;
+.radio__group__container {
+  margin-top: 24px;
 }
 
+.radio__group {
+  position: relative;
+  padding: 11px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio__group input[type='radio'] {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border:1px solid #2A2A2A;
+  -webkit-appearance: none;
+}
+
+
+
+.radio__group input[type='radio']:checked {
+  box-shadow: inset 0px 0px 0px 7px #2A2A2A;
+  border:none;
+}
+
+.radio__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__info__container {
+  margin-bottom: 2px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+input[id="shipping-dhl"] ~.radio__info .text {
+  font-weight:700;
+}
+
+.price,
+.period {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.price {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+}
+
+.radio__box__border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.radio__group input[type='radio']~.radio__box__border {
+  border-radius: 4px;
+  border: 1px solid #F0F0F5;
+}
+
+.radio__group input[type='radio']:checked~.radio__box__border {
+  border: 1px solid #2A2A2A;
+}
 

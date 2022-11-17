@@ -5,7 +5,7 @@ import styles from './Step2.module.css'
 function RadioGroup ({price, id, text, priceText, period, checked}) {
   return (
   <label className={styles.radio__group} data-price={price}>
-    <input id={id} type="radio" name="shipping"  defaultChecked={checked}/>
+    <input id={id} type="radio" name="shipping"  checked={checked}/>
     <div className={styles.radio__info}>
       <div className={styles.radio__info__container}>
         <div className={styles.text}>{text}</div>
