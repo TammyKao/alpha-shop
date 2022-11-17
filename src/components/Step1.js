@@ -1,4 +1,5 @@
 //  address phase
+import styles from './Step1.module.css'
 
 const selectOptions = {
 title: [
@@ -45,9 +46,9 @@ city: [
 
 function SelectGroup ({label, options}) {
   return (
-    <div className="input-group input-w-lg-2 input-w-sm-s1">
-      <div className="input-label">{label}</div>
-      <div className="select-container">
+    <div className={styles.selectgroup__container}>
+      <div className={styles.input__label}>{label}</div>
+      <div className={styles.select__container}>
         <select required>
           { options.map( option => {
             return <option value={option.value}>{option.name}</option>;
@@ -60,10 +61,13 @@ function SelectGroup ({label, options}) {
 
 
 
-export function InputGroup ({label, type, placeholder}) {
+
+
+export function InputGroup ({id, label, type, placeholder}) {
+  let inputId="input__"+id
   return (
-    <div className="input-group">
-      <div className="input-label">{label}</div>
+    <div className={inputId}>
+      <div className={styles.input__label}>{label}</div>
       <input type={type} placeholder={placeholder} />
     </div>
   );
@@ -73,20 +77,20 @@ export function InputGroup ({label, type, placeholder}) {
 
 export default function Step1 () {
   return (
-  <form className="col col-12" data-phase="address">
-    <h3 className="form-title">寄送地址</h3>
-    <section className="form-body col col-12">
-      <div className="col col-12">
+  <form className={styles.form__container} data-phase="address">
+    <h3 className={styles.form__title}>寄送地址</h3>
+    <section className={styles.form__body}>
+      <div className={styles.input__container}>
         <SelectGroup label='稱謂' options={selectOptions.title} />
-        <InputGroup label='姓名' type='text' placeholder='請輸入姓名' />
+        <InputGroup id='name' label='姓名' type='text' placeholder='請輸入姓名' />
       </div>
-      <div className="col col-12">
-        <InputGroup label='tel' type='text' placeholder='請輸入行動電話' />
-        <InputGroup label='email' type='text' placeholder='請輸入電子郵件' />
+      <div className={styles.input__container}>
+        <InputGroup id='mobile' label='電話' type='text' placeholder='請輸入行動電話' />
+        <InputGroup id='email' label='email' type='text' placeholder='請輸入電子郵件' />
       </div>
-      <div className="col col-12">
-        <SelectGroup label='城市' options={selectOptions.city}/>
-        <InputGroup label='地址' type='text' placeholder='請輸入地址' />
+      <div className={styles.input__container}>
+        <SelectGroup label='縣市' options={selectOptions.city}/>
+        <InputGroup id='address' label='地址' type='text' placeholder='請輸入地址' />
       </div>
     </section>
   </form>
