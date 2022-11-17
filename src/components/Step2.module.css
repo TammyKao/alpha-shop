@@ -1,0 +1,22 @@
+.form__container {
+  width: 435px;
+  /* height: 192px; */
+  margin-top: 64px;
+  border: 1px solid #000;
+}
+
+
+.form__title {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 24px;
+  border: 1px solid brown;  
+}
+
+
+.form__body {
+  margin-top:24px;
+  border: 1px solid brown;
+}
+
+
