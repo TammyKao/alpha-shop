@@ -1,6 +1,5 @@
 .form__container {
   width: 540px;
-  /* border: 1px solid #000; */
   margin-top: 64px;
 }
 
@@ -10,13 +9,14 @@
   font-weight: 700;
   font-size: 24px;
   color: var(--main-text);
-  /* border: 1px solid brown;   */
 }
 
 
 input,
 select {
   width: 100%;
+  /* add box-sizing property below to avoid overflow */
+  box-sizing: border-box;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -24,8 +24,7 @@ select {
   border: 1px solid var(--input-border);
   font-family: var(--main-font-family);
   background-color: transparent;
-  padding:12px 0;
-  padding-left:4px;
+  padding: 12px 16px;
 }
 
 
@@ -33,6 +32,24 @@ select {
   color: var(--select-true);
   cursor: pointer;
   -webkit-appearance: none;
+}
+
+
+.select__container {
+  position: relative;
+}
+
+
+.select__container::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: var(--select-arrow) transparent transparent transparent;
+  content: "";
 }
 
 
@@ -45,7 +62,6 @@ select {
   margin-top: 24px;
 }
 
-
 .input__label {
   margin-bottom: 8px;
   font-size: 12px;
@@ -57,22 +73,18 @@ select {
 
 .selectgroup__container {
   grid-column: 1/3;
-  /* border: 1px solid red; */
 }
 
 :global(.input__name),
 :global(.input__address) {
   grid-column: 3/7;
-  /* border: 1px solid blue; */
 }
 
 :global(.input__mobile) {
   grid-column: 1/4;
-  /* border: 1px solid yellow; */
 }
 
 :global(.input__email) {
   grid-column: 4/7;
-  /* border: 1px solid yellow; */
 }
 
