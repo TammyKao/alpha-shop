@@ -1,8 +1,8 @@
-.register__title {
-font-weight:700px;
-font-size:32px;
-line-height:38px;
-color:var(--main-text);
+.progress__title {
+  font-weight: 700px;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text);
 }
 
 
@@ -16,40 +16,75 @@ color:var(--main-text);
 
 
 .progress__bar {
-  display:flex;
-  width:60px;
-  height:1px;
+  display: flex;
+  width: 60px;
+  height: 1px;
   border: 1px solid var(--done-progress-border);
   background-color: var(--done-progress-border);
 }
 
+.progress__bar__undone {
+  composes: progress__bar;
+  border: 1px solid var(--undone-progress-border);
+  background-color: var(--undone-progress-border);
+}
 
-.progress-group {
+.progress__group {
   display: flex;
+  align-items: center;
+}
+
+.progress__icon,
+span[phase=undone] {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
 .progress__icon {
- display:inline-block;
- width:24px;
- height:24px;
- border-radius:50%;
- margin-right: 8px;
- text-align: center;
- background-color:var(--pg-addr-bg-color);
+  background-color: var(--pg-addr-bg-color); 
+}
+
+span[phase=undone] {
+  background-color: transparent;
+  border: 1px solid var(--progress-undone-color);
+}
+
+
+.progress__text, 
+span[phase=undone] .progress__text {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  font-weight: 700; 
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .progress__text {
-  width:8px;
-  height:16px;
-  font-weight:700; 
-  font-size:12px;
-  color:var(--progress-done-color);
+  color: var(--progress-done-color);
+}
+
+span[phase=undone] .progress__text {
+  color: var(--progress-undone-color);
 }
 
 
+.progress__label,
+span[phase=undone] ~.progress__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .progress__label {
-  font-weight:400;
-  font-size:16px;
-  line-height:24px;
   color: var(--main-text);
+}
+
+span[phase=undone] ~.progress__label {
+  color: var(--progress-undone-color);
 }
