@@ -1,36 +1,36 @@
 // credit-card phase
 import { InputGroup } from "./Step1";
+import styles from "./Step3.module.css";
 
- <InputGroup label='卡號' type='text' placeholder='1111 2222 3333 4444' />
 
 export default function Step3() {
   return (
-  <form className="col col-12" data-phase="credit-card">
-    <h3 className="form-title">付款資訊</h3>
-    <section className="form-body col col-12">
-      <div className="col col-12">
+  <form className={styles.form__container} data-phase="credit-card">
+    <h3 className={styles.form__title}>付款資訊</h3>
+    <section className={styles.form__body}>
+      <div className={styles.input__container}>
         <InputGroup 
+          id='card__holder'
           label='持卡人姓名' 
-          type='text' 
           placeholder='John Doe' 
         />
       </div>
-      <div className="col col-12">
+      <div className={styles.input__container}>
         <InputGroup 
+          id='card__number'
           label='卡號' 
-          type='text' 
           placeholder='1111 2222 3333 4444'
          />
       </div>
-      <div className="col col-12">
+      <div className={styles.input__container}>
         <InputGroup 
+          id ='expire__date'
           label='有效期限' 
-          type='text' 
           placeholder='MM/YY'
          />
-        <InputGroup 
+        <InputGroup
+          id ='cvc' 
           label='CVC / CCV' 
-          type='text' 
           placeholder='123'
          />
       </div>

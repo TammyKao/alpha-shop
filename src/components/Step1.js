@@ -63,12 +63,12 @@ function SelectGroup ({label, options}) {
 
 
 
-export function InputGroup ({id, label, type, placeholder}) {
+export function InputGroup ({id, label, placeholder}) {
   let inputId="input__"+id
   return (
     <div className={inputId}>
       <div className={styles.input__label}>{label}</div>
-      <input type={type} placeholder={placeholder} />
+      <input type='text' placeholder={placeholder} />
     </div>
   );
 } 
@@ -82,15 +82,15 @@ export default function Step1 () {
     <section className={styles.form__body}>
       <div className={styles.input__container}>
         <SelectGroup label='稱謂' options={selectOptions.title} />
-        <InputGroup id='name' label='姓名' type='text' placeholder='請輸入姓名' />
+        <InputGroup id='name' label='姓名'  placeholder='請輸入姓名' />
       </div>
       <div className={styles.input__container}>
-        <InputGroup id='mobile' label='電話' type='text' placeholder='請輸入行動電話' />
-        <InputGroup id='email' label='email' type='text' placeholder='請輸入電子郵件' />
+        <InputGroup id='mobile' label='電話' placeholder='請輸入行動電話' />
+        <InputGroup id='email' label='email' placeholder='請輸入電子郵件' />
       </div>
       <div className={styles.input__container}>
         <SelectGroup label='縣市' options={selectOptions.city}/>
-        <InputGroup id='address' label='地址' type='text' placeholder='請輸入地址' />
+        <InputGroup id='address' label='地址' placeholder='請輸入地址' />
       </div>
     </section>
   </form>

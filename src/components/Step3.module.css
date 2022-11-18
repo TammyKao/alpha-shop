@@ -1,0 +1,26 @@
+
+.form__container {
+  composes: form__container from './Step1.module.css'
+}
+
+.form__title {
+  composes: form__title from './Step1.module.css'
+}
+
+.input__container {
+  composes: input__container from './Step1.module.css'
+}
+
+
+:global(.input__card__holder),
+:global(.input__card__number) {
+  grid-column: 1/5;
+}
+
+:global(.input__expire__date) {
+  grid-column: 1/4;
+}
+
+:global(.input__cvc) {
+  grid-column: 4/7;
+}
