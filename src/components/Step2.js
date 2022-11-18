@@ -1,8 +1,7 @@
-//  <!-- shipping phase -->
-
+// shipping phase
 import styles from './Step2.module.css'
 
-function RadioGroup ({price, id, text, priceText, period, checked}) {
+function RadioGroup ({id, price, text, priceText, period, checked}) {
   return (
   <label className={styles.radio__group} data-price={price}>
     <input id={id} type="radio" name="shipping"  checked={checked}/>
