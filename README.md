@@ -1,10 +1,10 @@
-### Alpha Shop
+# Alpha Shop
 
 ![Screenshot of Alpha Shop Step1](./public/image/Step1_screenshot.JPG)
 
 ## Description
 
-*依據專案設計稿(https://www.figma.com/file/8D1kUmCDV02GGGroemX8SF/ACCapstone%3A-Frontend-UI?node-id=3%3A5)，以 React 框架實作購物車畫面。
+*依據[專案設計稿](https://www.figma.com/file/8D1kUmCDV02GGGroemX8SF/ACCapstone%3A-Frontend-UI?node-id=3%3A5)，以 React 框架實作購物車畫面。
 *目前先渲染 Step1 畫面
 
 ## Quick Start
@@ -27,9 +27,9 @@ npm start
 
 5. 開啟瀏覽器即可進入此專案 :
 
-```
+ˋˋˋ
 [http://localhost:3000](http://localhost:3000)
-```
+ˋˋˋ
 
 6. 若欲暫停:
 
