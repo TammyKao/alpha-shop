@@ -25,9 +25,7 @@ npm install
 npm start
 ```
 
-5. 開啟瀏覽器即可進入此專案 :
-
-[http://localhost:3000](http://localhost:3000)
+5. 開啟瀏覽器即可進入此專案 : [http://localhost:3000](http://localhost:3000)
 
 6. 若欲暫停:
 
