@@ -22,19 +22,19 @@ return (
                </svg> */}
               </div>
             </div>
-          <div class="price"></div>
+          <div class="price">$3999</div>
        </div>
       </div>
    </section>
 
    <section class="cart-info shipping col col-12">
       <div class="text">運費</div>
-      <div class="price"></div>
+      <div class="price">免費</div>
    </section>
 
    <section class="cart-info total col col-12">
       <div class="text">小計</div>
-      <div class="price"></div>
+      <div class="price">$5298</div>
    </section>
 
   </section>
