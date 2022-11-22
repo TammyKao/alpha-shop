@@ -1,43 +1,43 @@
-// Cart
 
+import { products } from './InitialData.js'
 import { ReactComponent as Minus } from '../../icons/minus.svg'
 import { ReactComponent as Plus} from '../../icons/plus.svg'
+import styles from './Cart.module.css'
 
-function CartInfo ({name, text, price}) {
-  return (
-   <section class="styles__cart__info" name ={name}>
-      <div class="text">{text}</div>
-      <div class="price">{price}</div>
+
+function CartInfo ({name, text, amount}) {
+   return (
+   <section class={styles.cart__info} name={name}>
+      <div class={styles.text}>{text}</div>
+      <div class={styles.amount}>{amount}</div>
    </section>
   );
 }
 
-
 export default function Cart () {
-return (
-  <section class="cart-container">
-   
-   <h3 class="cart-title">購物籃</h3>
-
-   <section class="product-list" data-total-price="0">
-     <div class="product-container col col-12" data-count="0" data-price="3999">
-       <img class="img-container" src="../../../image/product-1.jpg" />
-       <div class="product-info">
-           <div class="product-name">破壞補丁修身牛仔褲</div>
-           <div class="product-control-container">
-              <div class="product-control">
-               <Minus />
-               <span class="product-count">1</span>
-               <Plus />
-              </div>
+   const listItems = products.map( product => 
+      <div class={styles.product__container} key={product.id}>
+         <img class={styles.img__container} src={product.img} alt={product.name} />
+         <div class={styles.product__info}>
+            <div class={styles.product__name}>{product.name}</div>
+            <div class={styles.product__control__container}>
+               <div class={styles.product__control}>
+                  <Minus class={styles.minus} />
+                  <span class={styles.product__count}>{product.quantity}</span>
+                  <Plus class={styles.plus} />
+               </div>
             </div>
-          <div class="price">$3999</div>
-       </div>
+            <div class={styles.price}>${product.price}</div>
+         </div>
       </div>
-   </section>
+      );
 
-  <CartInfo name="shipping" text="運費" price="免費" />
-  <CartInfo name="total" text="小計" price="$5298" />
-  </section>
-  );
+   return (
+   <section class={styles.cart__container}>
+      <h3 class={styles.cart__title}>購物籃</h3>
+      <section class={styles.product__list}>{listItems}</section>
+      <CartInfo name="shipping" text="運費" amount="免費" />
+      <CartInfo name="total" text="小計" amount="$400" />
+   </section>
+   );
 }
