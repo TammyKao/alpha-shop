@@ -1,5 +1,8 @@
 // Cart
 
+import { ReactComponent as Minus } from '../../icons/minus.svg'
+import { ReactComponent as Plus} from '../../icons/plus.svg'
+
 function CartInfo ({name, text, price}) {
   return (
    <section class="styles__cart__info" name ={name}>
@@ -23,13 +26,9 @@ return (
            <div class="product-name">破壞補丁修身牛仔褲</div>
            <div class="product-control-container">
               <div class="product-control">
-               {/* <svg class="product-action minus">
-                  <use xlink:href="#svg-icon-minus"></use>
-               </svg> */}
+               <Minus />
                <span class="product-count">1</span>
-               {/* <svg class="product-action plus">
-                  <use xlink:href="#svg-icon-plus"></use>
-               </svg> */}
+               <Plus />
               </div>
             </div>
           <div class="price">$3999</div>
