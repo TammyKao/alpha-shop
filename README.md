@@ -4,9 +4,9 @@
 
 ## Description
 
-目前先渲染 Step1 畫面。
+目前先渲染 Step1 及 右半部購物車畫面。
 
-![Screenshot of Alpha Shop Step1](./public/image/Step1_screenshot.JPG)
+![Screenshot of Alpha Shop App](./public/image/App_screenshot.JPG)
 
 ## Quick Start
 
