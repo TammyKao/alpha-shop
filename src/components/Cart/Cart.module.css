@@ -2,12 +2,14 @@
   width: 440px;
   height: 492px;
   border: 1px solid #F0F0F5;
-  /* border: 1px solid violet; */
   border-radius: 8px;
   padding: 0px 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-left: 130px;
+  margin-top: 226px;
+  margin-bottom:408px;
 }
 
 
