@@ -1,9 +1,9 @@
-
-import { initialProducts } from './InitialProducts.js'
 import { ReactComponent as Minus } from '../../icons/minus.svg'
 import { ReactComponent as Plus} from '../../icons/plus.svg'
+import { useContext } from 'react'; 
+import { CartContext } from '../CartContext.js'
+
 import styles from './Cart.module.css'
-import { useState } from 'react'; 
 
 
 function CartInfo ({name, text, amount}) {
@@ -16,11 +16,9 @@ function CartInfo ({name, text, amount}) {
 }
 
 
-export default function Cart () {
-   
-  const [products, setProducts] = useState(initialProducts)
-
-  // "+號"按鈕功能   
+export default function Cart () {   
+  const {products, setProducts} = useContext(CartContext)
+  // 增加 item 按鈕  
   function handleIncreaseClick(productId) {
        let nextProducts = products.map(product => {
          if(product.id === productId) {
@@ -37,7 +35,8 @@ export default function Cart () {
          );
       setProducts(nextProducts)
    }
-   // "-號"按鈕功能
+
+   // 減少 item 按鈕
    function handleDecreaseClick(productId) {
       let nextProducts = products.map(product => {
          if(product.id === productId) {
@@ -55,7 +54,7 @@ export default function Cart () {
       setProducts(nextProducts)
    }
 
-   // 購物車item
+   // 購物車 items
    const listItems = products.map(product => 
       <div class={styles.product__container} key={product.id}>
          <img class={styles.img__container} src={product.img} alt={product.name} />
@@ -82,7 +81,6 @@ export default function Cart () {
       return total       
    }
       
-
    return (
    <section class={styles.cart__container}>
       <h3 class={styles.cart__title}>購物籃</h3>

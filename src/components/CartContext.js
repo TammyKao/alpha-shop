@@ -1,3 +1,4 @@
+import { createContext } from 'react';
 
 export const initialProducts = [
   {
@@ -15,3 +16,5 @@ export const initialProducts = [
     quantity: 1,
   },
 ]
+
+export const CartContext = createContext(initialProducts);
