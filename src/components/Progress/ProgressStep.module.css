@@ -35,7 +35,7 @@
 }
 
 .progress__icon,
-span[phase=undone] {
+.progress__icon__undone {
   display: inline-block;
   position: relative;
   width: 24px;
@@ -45,17 +45,19 @@ span[phase=undone] {
 }
 
 .progress__icon {
-  background-color: var(--pg-addr-bg-color); 
+  background-color: transparent;
+  border: 1px solid black;
 }
 
-span[phase=undone] {
+
+
+.progress__icon__undone {
   background-color: transparent;
   border: 1px solid var(--progress-undone-color);
 }
 
 
-.progress__text, 
-span[phase=undone] .progress__text {
+.progress__text {
   width: inherit;
   height: inherit;
   position: absolute;
@@ -65,17 +67,17 @@ span[phase=undone] .progress__text {
   text-align: center;
 }
 
-.progress__text {
-  color: var(--progress-done-color);
+.progress__icon .progress__text {
+  color: black;
 }
 
-span[phase=undone] .progress__text {
+.progress__icon__undone .progress__text {
   color: var(--progress-undone-color);
 }
 
 
 .progress__label,
-span[phase=undone] ~.progress__label {
+.progress__label__undone {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -85,6 +87,6 @@ span[phase=undone] ~.progress__label {
   color: var(--main-text);
 }
 
-span[phase=undone] ~.progress__label {
+.progress__label__undone {
   color: var(--progress-undone-color);
 }

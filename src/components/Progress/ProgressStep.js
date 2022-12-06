@@ -1,13 +1,18 @@
 import styles from './ProgressStep.module.css'
+import { ReactComponent as Check } from '../../icons/pg-complete.svg'
 
 // Step component
-function Step({phase, text, label}) {
+function Step({currentStep, step, label}) {
   return (
   <span className={styles.progress__group}>
-    <span className={styles.progress__icon} phase={phase}>
-      <span className={styles.progress__text}>{text}</span>
+    <span className={currentStep >= step ? styles.progress__icon : styles.progress__icon__undone} >
+      <span className={styles.progress__text}>
+        {currentStep > step ? <Check /> : step }
+      </span>
     </span>
-    <span className={styles.progress__label}>{label}</span>
+    <span className={currentStep >= step ? styles.progress__label : styles.progress__label__undone}>
+      {label}
+    </span>
   </span>
   );  
 }
@@ -19,27 +24,27 @@ function ProgressBar({className}) {
   );
 }
 
-export default function ProgressStep() { 
+export default function ProgressStep({currentStep}) { 
    return (
    <div>
      <h2 className={styles.progress__title}>結帳</h2>
      <section className={styles.progress__container}>
-       <Step 
-         text="1" 
+       <Step
+         currentStep ={currentStep}
+         step={1} 
          label="寄送地址" 
-         phase="done"
        />
        <ProgressBar className={styles.progress__bar} />
-       <Step 
-         text="2" 
+       <Step
+         currentStep ={currentStep} 
+         step={2} 
          label="運送方式" 
-         phase="undone"
          />
-       <ProgressBar className={styles.progress__bar__undone} />
+       <ProgressBar className={currentStep >= 2 ? styles.progress__bar:styles.progress__bar__undone} />
        <Step 
-         text="3" 
+         currentStep ={currentStep}
+         step={3} 
          label="付款資訊" 
-         phase="undone"
          />
      </section>
    </div>

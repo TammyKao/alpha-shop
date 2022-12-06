@@ -3,9 +3,9 @@ import styles from './ProgressControl.module.css'
 import { ReactComponent as LeftArrow } from '../../icons/left-arrow.svg'
 import { ReactComponent as RightArrow } from '../../icons/right-arrow.svg'
 
-function Button({name, text}) {
+function Button({name, text, onClick}) {
   return (
-    <button id={name}>
+    <button id={name} onClick={onClick}>
       <LeftArrow className={styles.left__arrow}/>
       {text}
       <RightArrow className={styles.right__arrow}/>
@@ -14,23 +14,23 @@ function Button({name, text}) {
  }
 
 
-export default function ProgressControl() {
+export default function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {
   return (
   <section class={styles.progress__control__container}>
-    <section class={styles.button__container} data-phase="address">
-      <Button name="next" text="下一步"/>
-    </section>
-
-    {/* 以下換頁畫面暫不渲染，將於後續進行換頁畫面時實作 */}
-
-    {/* <section class={styles.button__container} data-phase="shipping">
-      <Button name="prev" text="上一步"/>
-      <Button name="next" text="下一步"/>
-    </section>
-    <section class={styles.button__container} data-phase="credit-card">
-      <Button name="prev" text="上一步"/>
+    <section class={styles.button__container} currentStep={currentStep}>
+      { currentStep === 1 && 
+      <Button name="next" text="下一步" onClick={handleClickNext} />}
+      { currentStep === 2 && 
+      <>
+      <Button name="prev" text="上一步" onClick={handleClickPrev} />
+      <Button name="next" text="下一步" onClick={handleClickNext} />
+      </>}
+      { currentStep === 3 && 
+      <>
+      <Button name="prev" text="上一步" onClick={handleClickPrev} />
       <Button name="confirm" text="確認下單"/>
-    </section> */}
+      </>}
+    </section>
   </section>
   ); 
 }

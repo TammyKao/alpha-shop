@@ -4,7 +4,11 @@
 
 ## Description
 
-目前先渲染 Step1 及 右半部購物車畫面。
+1. 渲染左半部 Progress 及 右半部 Cart 畫面。
+
+2. 左半部 Progress : 可點擊下方按鈕切換 Step1 ~ Step3 表單。
+
+3. 右半部 Cart : 可點擊 Item 內 "+" 按鈕新增/ "-"按鈕減少商品數量 & 小計顯示商品金額加總。
 
 ![Screenshot of Alpha Shop App](./public/image/App_screenshot.JPG)
 

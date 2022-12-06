@@ -4,6 +4,7 @@ import Progress from './components/Progress/Progress.js'
 import Cart from './components/Cart/Cart.js'
 
 
+
 function App() {
   return (
   <div className={styles.main__container}>

@@ -11,7 +11,7 @@
   margin-top: 26px;
 }
 
-section[data-phase="address"] {
+section[currentStep="1"] {
  justify-content: end; 
 }
 

@@ -1,5 +1,5 @@
 
-export const products = [
+export const initialProducts = [
   {
     id: '1',
     name: '貓咪罐罐',
