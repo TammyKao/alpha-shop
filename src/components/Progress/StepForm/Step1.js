@@ -60,12 +60,12 @@ function SelectGroup ({label, options}) {
 }
 
 
-export function InputGroup ({id, label, placeholder}) {
+export function InputGroup ({id, label, placeholder, onChange, name}) {
   let inputId="input__"+id
   return (
     <div className={inputId}>
       <div className={styles.input__label}>{label}</div>
-      <input type='text' placeholder={placeholder} />
+      <input type='text' placeholder={placeholder} onChange={onChange} name={name}/>
     </div>
   );
 } 

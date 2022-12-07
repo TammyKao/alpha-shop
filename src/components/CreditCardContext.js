@@ -1,11 +1,11 @@
 import { createContext } from 'react';
 
 export const creditCardDefault = {
-  card__holder: " ",
-  card__number: " ",
-  expire__date: " ",
+  cardHolder: " ",
+  cardNumber: " ",
+  expireDate: " ",
   cvc: " ",
 }
 
-export const CreditCardContext = createContext(creditCardDefault);
 
+export const CreditCardContext = createContext(creditCardDefault);

@@ -18,32 +18,30 @@ function CartInfo ({name, text, amount}) {
 
 export default function Cart () {   
   const {products, setProducts} = useContext(CartContext)
-  // 增加 item 按鈕  
-  function handleIncreaseClick(productId) {
-       let nextProducts = products.map(product => {
+  
+  // "+"按鈕的增加項目功能 
+   function handleIncreaseClick(productId) {
+      let nextProducts = products.map(product => {
          if(product.id === productId) {
             return {
-               ...product,
-               quantity: product.quantity + 1
-            }
+            ...product,
+            quantity: product.quantity + 1
+          }
          } else {
             return product
          }
       })
-      nextProducts = nextProducts.filter( p =>
-         p.quantity > 0
-         );
       setProducts(nextProducts)
    }
 
-   // 減少 item 按鈕
+   // "-"按鈕的減少項目功能。項目數為"0"時，畫面移除該購物車項目。   
    function handleDecreaseClick(productId) {
       let nextProducts = products.map(product => {
          if(product.id === productId) {
             return {
-               ...product,
-               quantity: product.quantity - 1
-            }
+            ...product,
+            quantity: product.quantity - 1
+          }
          } else {
             return product
          }
@@ -81,6 +79,7 @@ export default function Cart () {
       return total       
    }
       
+   // 購物車畫面
    return (
    <section class={styles.cart__container}>
       <h3 class={styles.cart__title}>購物籃</h3>
@@ -90,3 +89,5 @@ export default function Cart () {
    </section>
    );
 }
+
+

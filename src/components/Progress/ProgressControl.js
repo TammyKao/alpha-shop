@@ -14,7 +14,7 @@ function Button({name, text, onClick}) {
  }
 
 
-export default function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {
+export default function ProgressControl({currentStep, handleClickPrev, handleClickNext, handleClickConfirm}) {
   return (
   <section class={styles.progress__control__container}>
     <section class={styles.button__container} currentStep={currentStep}>
@@ -28,7 +28,7 @@ export default function ProgressControl({currentStep, handleClickPrev, handleCli
       { currentStep === 3 && 
       <>
       <Button name="prev" text="上一步" onClick={handleClickPrev} />
-      <Button name="confirm" text="確認下單"/>
+      <Button name="confirm" text="確認下單" onClick={handleClickConfirm}/>
       </>}
     </section>
   </section>

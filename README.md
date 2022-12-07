@@ -10,6 +10,8 @@
 
 3. 右半部 Cart : 可點擊 Item 內 "+" 按鈕新增/ "-"按鈕減少商品數量 & 小計顯示商品金額加總。
 
+4. 按確認下單可 Console.log 小計金額及信用卡資訊。
+
 ![Screenshot of Alpha Shop App](./public/image/App_screenshot.JPG)
 
 ## Quick Start
