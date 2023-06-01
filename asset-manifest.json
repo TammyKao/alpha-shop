@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/alpha-shop/static/css/main.fb956916.css",
+    "main.js": "/alpha-shop/static/js/main.b43d7444.js",
+    "static/js/787.7315e2ba.chunk.js": "/alpha-shop/static/js/787.7315e2ba.chunk.js",
+    "static/media/plus.svg": "/alpha-shop/static/media/plus.a67fc669cae9d043ac2b39217f96f82c.svg",
+    "index.html": "/alpha-shop/index.html",
+    "static/media/left-arrow.svg": "/alpha-shop/static/media/left-arrow.08f154e8f86331fb4889593d1b05974c.svg",
+    "static/media/right-arrow.svg": "/alpha-shop/static/media/right-arrow.55fba09ff20977c0141d9362a70c8964.svg",
+    "static/media/minus.svg": "/alpha-shop/static/media/minus.cd48f4a7baedb1204c2d53fb5203f8ad.svg",
+    "static/media/pg-complete.svg": "/alpha-shop/static/media/pg-complete.9084bbfd5c04f6a0faca1a4d22d6086b.svg",
+    "main.fb956916.css.map": "/alpha-shop/static/css/main.fb956916.css.map",
+    "main.b43d7444.js.map": "/alpha-shop/static/js/main.b43d7444.js.map",
+    "787.7315e2ba.chunk.js.map": "/alpha-shop/static/js/787.7315e2ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb956916.css",
+    "static/js/main.b43d7444.js"
+  ]
+}
